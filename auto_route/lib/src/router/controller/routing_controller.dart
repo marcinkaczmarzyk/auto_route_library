@@ -685,7 +685,6 @@ class TabsRouter extends RoutingController {
   /// Updates [_activeIndex] and triggers a rebuild
   void setActiveIndex(int index, {bool notify = true}) {
     assert(index >= 0 && index < _pages.length);
-    if (_activeIndex != index) {
       void setIndex() {
         _previousIndex = _activeIndex;
         _activeIndex = index;
@@ -701,7 +700,6 @@ class TabsRouter extends RoutingController {
           setIndex();
         });
       }
-    }
   }
 
   @override
